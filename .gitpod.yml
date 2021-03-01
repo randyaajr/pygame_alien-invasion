@@ -10,3 +10,12 @@ vscode:
     - eventyret.bootstrap-4-cdn-snippet@1.6.0:AtNd6GnbCYVpmUkOaFXs3A==
     - esbenp.prettier-vscode@4.3.0:jkl8NYpF/GzsahVpjggK0Q==
     - kevinglasson.cornflakes-linter@0.4.0:Sgfmpf9YWoF5/BDJu2xn0w==
+    
+ ports:
+  - port: 5900
+    onOpen: ignore
+  - port: 6080
+    onOpen: open-preview
+tasks:
+  - init: pip3 install -r requirements.txt
+    command: python3 alien-invasion.py
